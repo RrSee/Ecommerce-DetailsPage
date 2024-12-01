@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Details</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <nav class="border border-t-slate-400">
+        <div class="mt-[51px] grid grid-cols-2 ml-[135px] mr-[135px] mb-[35px]">
+            <div class="w-[118px] inter text-[24px] font-bold">
+                Exclusive
+            </div>
+            <div class="ml-auto">
+                <input type="text" id="searchInput" class="w-[243px] h-[39px] pt-[7px] pb-[7px] pl-[20px] pr-[12px] bg-gray-100 rounded" placeholder="What are you looking for?">
+                <i class="fa-solid fa-magnifying-glass relative right-[30px] cursor-none" id="icon"></i>
+                <a href="#" class=""><i class="fa-regular fa-user text-xl"></i></a>
+                <a href="#" class="ml-[24px]"><i class="fa-solid fa-cart-shopping text-xl"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="h-[968px] ml-[115px] mr-[115px] w-[1210px] z-10 bg-[#FFFFFF] hidden pl-[20px] pr-[20px] pt-[20px] shadow-[0_4px_22px_0_rgba(0,0,0,0.2)]" id="modal">
+        <p class="inter font-semibold text-[36px] mt-[20px] ml-[20px] mb-[60px]" id="modalText"></p>
+
+        <div class="grid grid-cols-4 gap-[30px]" id="modalProducts">
+
+        </div>
+
+        <div class="flex justify-center" id="closeButton">
+            <div class="poppins text-[16px] font-medium px-[48px] py-[16px] bg-[#DB4444] text-white inline-block cursor-pointer mt-[60px] mb-[20px] text-center rounded">
+              Close
+            </div>
+        </div>
+    </div>
+
+    <div class="" id="esas">
+
+        
+        <main class="ml-[135px] mt-[99px] mr-[135px] flex" id="main">
+            <div id="imgs">
+            <!-- <img src="" alt="" class="w-[170px] h-[138px] py-[22px] px-[18px] bg-[#F5F5F5] rounded mb-[16px]"> -->
+            <!-- <img src="" alt="" class="w-[170px] h-[138px] py-[22px] px-[18px] bg-[#F5F5F5] rounded mb-[16px]">
+            <img src="" alt="" class="w-[170px] h-[138px] py-[22px] px-[18px] bg-[#F5F5F5] rounded mb-[16px]">
+            <img src="" alt="" class="w-[170px] h-[138px] py-[22px] px-[18px] bg-[#F5F5F5] rounded"> -->
+        </div>
+        
+        <div class="ml-[30px] mr-[70px]" id="mainImg">
+            <!-- <img src="" alt="" class="w-[500px] h-[600px] bg-[#F5F5F5] rounded px-[27px] pt-[154px] pb-[131px]"> -->
+        </div>
+        
+        <div class="max-w-[400px]">
+            <div id="divText">
+                <!-- <p class="inter font-semibold text-[24px]">Havic HV G-92 Gamepad</p>
+                <p class="poppins text-[14px] font-normal text-lime-400 border-l border-l-slate-400 pl-[16px] mt-[16px]">In Stock</p>
+                <p class="inter text-[24px] font-normal mt-[16px]">$192.00</p>
+                <p class="poppins text-[14px] font-normal mt-[24px] pb-[24px] border-b border-l-slate-400">PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.</p> -->
+            </div>
+            
+            <div class="flex mt-[104px]">
+                <div class="flex">
+                    <button class="w-[41px] h-[44px] border border-slate-400 text-[24px] rounded-l" id="minusButton">-</button>
+                    <p class="w-[80px] h-[44px] text-center pt-[8px] pb-[8px] pl-[34px] pr-[34px] border border-slate-400" id="count">0</p>
+                    <button class="w-[41px] h-[44px] border border-[#DB4444] text-[24px] rounded-r bg-[#DB4444] text-white" id="plusButton">+</button>
+                </div>
+                
+                <p class="text-center poppins font-medium text-white bg-[#DB4444] rounded text-[16px] w-[224px] h-[44px] ml-[16px] py-[10px] px-[56px] cursor-pointer" id="addButton">Add to Basket</p>
+            </div>
+            
+            <div class="mt-[40px] border border-slate-400 rounded">
+                <div class="flex border-b border-b-slate-400 pb-[16px] pl-[16px] pt-[24px] pr-[51px]">
+                    <i class="fa-solid fa-truck text-[44px]"></i>
+                    <div class="ml-[16px]">
+                        <p class="poppins font-medium text-[16px]">Free Delivery</p>
+                        <a href="#" class="mt-[8px] poppins font-medium text-[12px] underline">Enter your postal code for Delivery Availability</a>
+                    </div>
+                </div>
+                
+                <div class="flex pb-[16px] pl-[16px] pt-[24px] pr-[51px]">
+                    <i class="fa-solid fa-arrow-rotate-left text-[44px]"></i>
+                    <div class="ml-[16px]">
+                        <p class="poppins font-medium text-[16px]">Return Delivery</p>
+                        <a href="#" class="mt-[8px] poppins font-medium text-[12px]">Free 30 Days Delivery Returns. <span class="underline">Details</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div class="mt-[179px] mx-[135px] flex">
+        <p class="w-[20px] bg-[#DB4444] h-[40px] rounded"></p>
+        <p class="poppins font-semibold text-[16px] text-[#DB4444] ml-[16px] py-[10px]">Related Items</p>
+    </div>
+    
+    <div class="mt-[60px] mx-[135px] grid grid-cols-4 gap-[30px]" id="categoryProduct">
+        <!-- <div>
+            <img src="" alt="" class="w-[270px] h-[250px] bg-[#F5F5F5] rounded py-[35px] px-[40px] cursor-pointer">
+            <p class="poppins font-medium text-[16px] mt-[16px]">HAVIT HV-G92 Gamepad</p>
+            <p class="poppins font-medium text-[16px] mt-[8px] text-[#DB4444]">$120</p>
+        </div>
+        
+        <div>
+            <img src="" alt="" class="w-[270px] h-[250px] bg-[#F5F5F5] rounded py-[35px] px-[40px] cursor-pointer">
+            <p class="poppins font-medium text-[16px] mt-[16px]">HAVIT HV-G92 Gamepad</p>
+            <p class="poppins font-medium text-[16px] mt-[8px] text-[#DB4444]">$120</p>
+        </div>
+        
+        <div>
+            <img src="" alt="" class="w-[270px] h-[250px] bg-[#F5F5F5] rounded py-[35px] px-[40px] cursor-pointer">
+            <p class="poppins font-medium text-[16px] mt-[16px]">HAVIT HV-G92 Gamepad</p>
+            <p class="poppins font-medium text-[16px] mt-[8px] text-[#DB4444]">$120</p>
+        </div>
+        
+        <div>
+            <img src="" alt="" class="w-[270px] h-[250px] bg-[#F5F5F5] rounded py-[35px] px-[40px] cursor-pointer">
+            <p class="poppins font-medium text-[16px] mt-[16px]">HAVIT HV-G92 Gamepad</p>
+            <p class="poppins font-medium text-[16px] mt-[8px] text-[#DB4444]">$120</p>
+        </div> -->
+    </div>
+</div>
+    
+<footer class="bg-[#000000] w-[100%] h-[450px] mt-[170px] ">
+    <div class="flex text-[#FAFAFA] justify-center  justify-between pt-[80px] mb-[100px] mx-[135px]">
+        <div class="item flex flex-col gap-y-6 relative">
+            <h3 class="font-bold text-[24px] leading-6 font-poppins">Exclusive</h3>
+            <p class="font-medium text-[20px] leading-8 fony-poppins">Subscribe</p>
+            <p class="font-normal text-[16px] leading-6 font-poppins">Get 10% off your first order</p>
+            <input class="bg-[#000000] border-[1.5px] pl-4 py-3 focus:outline-none " type="text " placeholder="Enter your email">
+            <img class="absolute top-[74%] right-[10px] pr-4 py-3 hover:cursor-pointer" src="images/Vector.png"
+                alt="">
+        </div>
+        <div class="item item flex flex-col gap-y-6 ">
+            <h3 class="text-[20px] leading-8 fony-poppins">Support</h3>
+            <p class="font-normal text-[16px] leading-6 font-poppins">111 Bijoy sarani, Dhaka,<br> DH 1515,
+                Bangladesh.</p>
+            <p class="font-normal text-[16px] leading-6 font-poppins"><a href="mailto:example@gmail.com">exclusive@gmail.com</a></p>
+            <p class="font-normal text-[16px] leading-6 font-poppins"><a href="https://wa.me/994501234567" target="_blank">
+                +88015-88888-9999
+              </a></p>
+        </div>
+        <div class="item item flex flex-col gap-y-6 ">
+            <h3 class="text-[20px] leading-8 fony-poppins">Account</h3>
+            <p class="font-normal text-[16px] leading-6 font-poppins"><a href="myAccount.html">My account</a></p>
+            <p class="font-normal text-[16px] leading-6 font-poppins"> <a href="login.html">Login</a> / <a href="register.html">Register</a></p>
+            <p class="font-normal text-[16px] leading-6 font-poppins"><a href="basket.html">Basket</a></p>
+        </div>
+        <div class="item item flex flex-col gap-y-6 ">
+            <h3 class="text-[20px] leading-8 fony-poppins">Quick Link</h3>
+            <p class="font-normal text-[16px] leading-6 font-poppins">Privacy Policy</p>
+            <p class="font-normal text-[16px] leading-6 font-poppins">Terms Of Use</p>
+        </div>
+        <div class="item">
+            <img src="images/Frame 742.png" alt="">
+        </div>
+    </div>
+    <div class="text-center">
+        <hr class="border-[1px] opacity-[40%] ">
+        <p class="text-poppins text-[#808080] mt-5"><i class="fa-regular fa-copyright"></i> Copyright Rimel 2022. All right reserved</p>
+    </div>
+</footer>
+
+</body>
+</html>
